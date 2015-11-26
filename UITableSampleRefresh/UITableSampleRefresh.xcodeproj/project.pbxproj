@@ -63,10 +63,10 @@
 			children = (
 				34F8BBE71C06FB3900E90E8D /* UIScrollView+CustomRefresh.h */,
 				34F8BBE81C06FB3900E90E8D /* UIScrollView+CustomRefresh.m */,
-				34F8BBE91C06FB3900E90E8D /* ViewController.h */,
-				34F8BBEA1C06FB3900E90E8D /* ViewController.m */,
 				34F8BBD31C06FB0F00E90E8D /* AppDelegate.h */,
 				34F8BBD41C06FB0F00E90E8D /* AppDelegate.m */,
+				34F8BBE91C06FB3900E90E8D /* ViewController.h */,
+				34F8BBEA1C06FB3900E90E8D /* ViewController.m */,
 				34F8BBD91C06FB0F00E90E8D /* Main.storyboard */,
 				34F8BBDC1C06FB0F00E90E8D /* Assets.xcassets */,
 				34F8BBDE1C06FB0F00E90E8D /* LaunchScreen.storyboard */,

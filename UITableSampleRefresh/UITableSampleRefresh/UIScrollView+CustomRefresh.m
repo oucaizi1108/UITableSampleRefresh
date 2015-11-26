@@ -97,13 +97,13 @@ static const char *refreshViewKeyFooter ;
         if (!self.headerRefreshView.isObserving) {
             [self addObserver:self.headerRefreshView forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
             [self addObserver:self.headerRefreshView forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
-            [self addObserver:self.headerRefreshView forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
+           
             self.headerRefreshView.isObserving=YES;
         }
         if (!self.footerRefreshView.isObserving) {
             [self addObserver:self.footerRefreshView forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
             [self addObserver:self.footerRefreshView forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
-            [self addObserver:self.footerRefreshView forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
+           
             self.footerRefreshView.isObserving=YES;
         }
         
@@ -112,13 +112,13 @@ static const char *refreshViewKeyFooter ;
         if (self.headerRefreshView.isObserving) {
             [self removeObserver:self.headerRefreshView forKeyPath:@"contentOffset"];
             [self removeObserver:self.headerRefreshView forKeyPath:@"contentSize" ];
-            [self removeObserver:self.headerRefreshView forKeyPath:@"frame"];
+           
             self.headerRefreshView.isObserving=NO;
         }
         if (self.footerRefreshView.isObserving) {
             [self removeObserver:self.footerRefreshView forKeyPath:@"contentOffset"];
             [self removeObserver:self.footerRefreshView forKeyPath:@"contentSize" ];
-            [self removeObserver:self.footerRefreshView forKeyPath:@"frame"];
+         
             self.footerRefreshView.isObserving=NO;
         }
     }
@@ -130,12 +130,12 @@ static const char *refreshViewKeyFooter ;
     if (self.headerRefreshView.isObserving) {
         [self removeObserver:self.headerRefreshView forKeyPath:@"contentOffset"];
         [self removeObserver:self.headerRefreshView forKeyPath:@"contentSize" ];
-        [self removeObserver:self.headerRefreshView forKeyPath:@"frame"];
+     
     }
     if (self.footerRefreshView.isObserving) {
         [self removeObserver:self.footerRefreshView forKeyPath:@"contentOffset"];
         [self removeObserver:self.footerRefreshView forKeyPath:@"contentSize" ];
-        [self removeObserver:self.footerRefreshView forKeyPath:@"frame"];
+      
     }
 }
 
@@ -189,10 +189,6 @@ static const char *refreshViewKeyFooter ;
         }
         self.frame = CGRectMake(0, yOrigin, self.bounds.size.width, RefreshViewHeight);
        
-    }
-    else if ([keyPath isEqualToString:@"frame"])
-    {
-        
     }
     else
     {
